@@ -108,7 +108,7 @@ def plot_five_ex_clusters(clusters , images):
 
     for cluster in filtered_clusters:
         cluster_indices = np.where(clusters == cluster)[0]
-        if len(cluster_indices) > 10:  # Minimum cluster size threshold
+        if len(cluster_indices) > 4:  # Minimum cluster size threshold
             selected_indices = random.sample(list(cluster_indices), min(n_examples, len(cluster_indices)))
             example_images[cluster] = selected_indices
 
